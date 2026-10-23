@@ -4,6 +4,10 @@ Dell OpenManage Server Administrator 9.5 can run as a local managed node on Wind
 
 This repository is the change that got past that, and the reason the disk and NIC filter drivers were left out. It was done on one machine: a PowerEdge R720, Windows 10 Pro 19045, OMSA 9.5.0 build 4063, PERC H710 Mini on Dell firmware 21.3.5-0002. After install, `omreport storage controller` reported that H710, and `omreport chassis info` reported the R720. The same four services were running: Server Administrator, DSM SA Event Manager (`dcevt64`), DSM SA Data Manager (`dcstor64`), and DSM SA Shared Services (`omsad`).
 
+![Virtual disk on a PERC H710 Mini, from the local OpenManage node on Windows 10](omsa-h710-virtual-disk.png)
+
+Background initialization was still running in that shot. Hot spare says Not Assigned because every disk is already in the RAID-6.
+
 Dell did not support this OS for the 9.5 package. Later OMSA releases (10.2, 11.x) drop 12th-generation servers, so they are the wrong download for an R720. Nothing here replaces OMSA on a Windows Server install. On Server 2016 or 2019 the stock installer is the right one, and this patch is unnecessary.
 
 The script does not contain Dell's installer. Download it from Dell.
