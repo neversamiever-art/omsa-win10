@@ -1,4 +1,4 @@
-# OMSA 9.5 on Windows 10
+# Install Dell OpenManage Server Administrator (OMSA) on Windows 10
 
 Dell OpenManage Server Administrator 9.5 can run as a local managed node on Windows 10. Chassis, fans, power, and a PERC all show up in the web UI. Dell's installer does not do this on its own. On a desktop Windows it installs the remote console and then asks for some other server's address.
 
